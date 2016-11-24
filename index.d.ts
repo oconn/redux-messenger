@@ -38,8 +38,9 @@ export interface IModal {
 }
 
 export interface IToast {
-    messege: string;
+    message: string;
     type?: string;
+    timer?: number;
 }
 
 export interface IModalComponentProps {
@@ -50,4 +51,9 @@ export interface IModalComponentProps {
 export interface IAlertComponentProps {
     alert?: IAlert;
     clearAlert: () => void;
+}
+
+export interface IToastComponentProps {
+    toast?: IToast;
+    removeToast: () => void
 }
