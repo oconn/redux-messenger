@@ -22,13 +22,32 @@ export interface IMessengerAction {
 }
 
 export interface IAlert {
-
+    onAccept?: () => any;
+    onAcceptText?: string;
+    onDecline?: () => any;
+    onDeclineText?: string;
+    title?: string;
+    message: string;
 }
 
 export interface IModal {
-
+    title?: string;
+    onClose?: () => any;
+    Component: any;
+    props?: any;
 }
 
 export interface IToast {
+    messege: string;
+    type?: string;
+}
 
+export interface IModalComponentProps {
+    modal?: IModal;
+    onClose: () => any;
+}
+
+export interface IAlertComponentProps {
+    alert?: IAlert;
+    clearAlert: () => void;
 }
