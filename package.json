@@ -1,6 +1,6 @@
 {
   "name": "redux-messenger",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "Redux actions & state management for working with user messages",
   "keywords": [
     "redux",
