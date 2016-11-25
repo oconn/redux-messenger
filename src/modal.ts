@@ -13,7 +13,7 @@ export const ModalComponent = (props: IModalComponentProps) => {
 
     return ce('div', { className: 'underlay' },
               ce('div', { className: 'modal-container' },
-                 ce('button', { className: 'close-modal-button', onClick: onClose }),
+                 ce('button', { className: 'close-modal-button', onClick: onClose }, 'X'),
                  modalTitle,
                  CustomModal));
 };

@@ -12,7 +12,7 @@ export const AlertComponent = (props: IAlertComponentProps) => {
     const alertMessage = ce('p', { className: 'alert-message' }, message);
 
     const acceptButton = ce('button', {
-        className: 'alert-button, accept',
+        className: 'alert-button accept',
         onClick: () => {
             clearAlert();
 
@@ -29,7 +29,9 @@ export const AlertComponent = (props: IAlertComponentProps) => {
         }
     }, onDeclineText || 'cancel');
 
-    const buttons = onDecline ? [acceptButton, declineButton] : acceptButton;
+    const buttons = onDecline ?
+        ce('div', { className: 'button-group'}, acceptButton, declineButton) :
+        ce('div', { className: 'button-group' }, acceptButton);
 
     return ce('div', { className: 'underlay' },
               ce('div', { className: 'alert-container' },

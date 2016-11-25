@@ -1,12 +1,12 @@
 import { IAlert, IModal, IToast, IMessengerAction } from '../';
 
 // Action Types
-export const SHOW_ALERT = 'MESSENGER_SHOW_ALERT';
+export const SHOW_ALERT   = 'MESSENGER_SHOW_ALERT';
 export const REMOVE_ALERT = 'MESSENGER_REMOVE_ALERT';
-export const ADD_MODAL = 'MESSENGER_ADD_MODAL';
+export const ADD_MODAL    = 'MESSENGER_ADD_MODAL';
 export const REMOVE_MODAL = 'MESSENGER_REMOVE_MODAL';
 export const CLEAR_MODALS = 'MESSENGER_CLEAR_MODALS';
-export const ADD_TOAST = 'MESSENGER_ADD_TOAST';
+export const ADD_TOAST    = 'MESSENGER_ADD_TOAST';
 export const REMOVE_TOAST = 'MESSENGER_REMOVE_TOAST';
 export const CLEAR_TOASTS = 'MESSENGER_CLEAR_TOASTS';
 

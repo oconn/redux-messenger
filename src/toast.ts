@@ -8,9 +8,13 @@ export const ToastComponent = (props: IToastComponentProps) => {
 
     const { message, type, timer } = toast;
 
-    window.setTimeout(() => {
-        removeToast();
-    }, timer || 2000);
+    if (!this.closeToastId) {
+        this.closeToastId = window.setTimeout(() => {
+            this.closeToastId = null;
+
+            removeToast();
+        }, timer || 2000);
+    }
 
     return ce('div', { className: 'toast-container' },
               ce('p', { className: `toast-message ${type ? type : ''}` }, message));
