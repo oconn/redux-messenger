@@ -16,7 +16,6 @@ const actionHandlers = {
         return merge(state, { alert: null });
     },
     [Actions.ADD_MODAL]: (state: IMessengerState, action: IMessengerAction) => {
-        console.log(append(action.payload, state.modals));
         return merge(state, { modals: append(action.payload, state.modals) });
     },
     [Actions.REMOVE_MODAL]: (state: IMessengerState, action: IMessengerAction) => {
